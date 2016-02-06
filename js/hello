@@ -7,16 +7,26 @@ var  printPlain = function (message) {
   console.log(message);
 }
 
-function printBlue() {
-  console.log(c.blue + "Hello");
+function printBlue(message) {
+  console.log(c.blue + (message) + c.x);
+}
+
+var printRed = function(message) {
+  console.log(c.red + (message) + c.x);
 }
 
 var printMulti = function (message) {
   while(true) {
-    console.log(c.multi(message));
+    console.log(c.clear + c.multi(message));
   }
 }
 
-printPlain("Hello");
+var firstValue = process.argv[2]
+
+
+
+//printPlain("Hello");
 //printMulti("Hello");
-printBlue();
+printBlue("Hello " + firstValue);
+//printRed("Hey");
+
